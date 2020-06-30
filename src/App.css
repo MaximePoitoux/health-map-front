@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  background: linear-gradient(rgb(180, 207, 248), rgb(255, 220, 250));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 61, 190, 0.4)), url(./components/picture/background_app.jpg);
+  background-size: cover;
+  /* background: linear-gradient(rgb(180, 207, 248), rgb(255, 220, 250)); */
   min-height: 100vh;
   font-family: 'Cabin', sans-serif;
   letter-spacing: 0.2em;

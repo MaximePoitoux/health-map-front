@@ -1,8 +1,8 @@
 import React from 'react'
 import globe from './globe.svg'
-import './Globe.css'
+import './Logo.css'
 
-function Globe() {
+function Logo() {
 
   
   return (
@@ -11,9 +11,9 @@ function Globe() {
           src={globe}
           alt='globe'
         />
-        <h1 className='title-logo'>Docto MAP</h1>
+        <h1 className='title-logo'>DoctoMAP</h1>
     </div>
   );
 }
 
-export default Globe
+export default Logo

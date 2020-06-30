@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Enter from './Enter'
-import Globe from '../shared/Globe'
+import Logo from '../shared/Logo'
 import './HomePage.css'
 
 const HomePage = () => {
     return(
         <div>
-            <Globe />
+            <Logo />
             <div className="div-enter">
                 <div className='text-HomePage'>
                     <p>Travel Serene,</p> 
