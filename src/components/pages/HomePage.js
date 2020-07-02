@@ -1,8 +1,9 @@
 import React from 'react';
 
-import Enter from './Enter'
+// import Enter from './Enter'
 import Logo from '../shared/Logo'
 import './HomePage.css'
+import LiquidButton from '../shared/LiquidButton';
 
 const HomePage = () => {
     return(
@@ -14,7 +15,8 @@ const HomePage = () => {
                     <p>Travel Vaccinated</p>
                 </div>
                 <div className="div-Enter">
-                    <Enter />
+                    {/* <Enter /> */}
+                    <LiquidButton />
                 </div>
             </div>
         </div>
