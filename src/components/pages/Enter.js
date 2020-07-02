@@ -2,15 +2,19 @@ import React from 'react'
 
 import { NavLink } from "react-router-dom"
 import './Enter2.css'
+import '../shared/LiquidButton.js'
 
 class Enter extends React.Component {
 
     render() {
         return (
             <div>
-                <NavLink to="/Map"><a href="/Map" class="btn-liquid">
-                    <span class="inner">Go to World Map</span>
-                </a></NavLink>
+                <LiquidButton >
+                    <NavLink to="/Map"><div href="/Map" className="btn-liquid">
+                        <span className="inner">Go to World Map</span>
+                    </div></NavLink>
+                </LiquidButton>
+
             </div>
         )
     }
