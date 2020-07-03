@@ -15,7 +15,7 @@ function LiquidButton() {
     mouseDist = 70,
     damping = 0.05,
     showIndicators = false;
-  mouseX = 0,
+  var mouseX = 0,
     mouseY = 0,
     relMouseX = 0,
     relMouseY = 0,
@@ -166,7 +166,7 @@ function LiquidButton() {
    */
   function renderCanvas() {
     // rAF
-    rafID = requestAnimationFrame(renderCanvas);
+    var rafID = requestAnimationFrame(renderCanvas);
 
     // Clear scene
     context.clearRect(0, 0, $canvas.width(), $canvas.height());

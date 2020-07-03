@@ -10,11 +10,12 @@ import LiquidButton from '../shared/LiquidButton'
 class Enter extends React.Component {
 
     componentDidMount() {
-        $(LiquidButton)
+        $(LiquidButton())
     }
 
     componentWillUnmount() {
-        $(document).off('mousemove')
+        // $(document).off('mousemove')
+        $(LiquidButton())
     }
 
     render() {
