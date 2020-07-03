@@ -1,22 +1,35 @@
+
 .background-VaccinationCountryBox{
     background-color: white;
     width: 50vw;
     height: 600px;
     border-radius: 20px;
 }
+
 .background-VaccinationCountryBox h1 {
-    color: #7180AC;
-    margin-top: 10px;
-    background-color: #FFCFDE;
-    font-weight: bold;
-    font-size: 2.5rem;
+    /* color: rgb(136, 93, 177); */
+    background-color: #e9b4c5;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'MuseoModerno', cursive;
+	letter-spacing: 0.04em;
+    font-size: 1.5rem;
     text-align: center;
-    padding: 5px;
+    padding: 0.5em;
+    margin-top: -0.5rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
 }
 .countryList{
     display: flex;
     justify-content: space-evenly;
     color: #7180AC;
+}
+
+.image {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .fa-syringe{
@@ -29,12 +42,12 @@
 
 .show-calendar {
     text-decoration: none;
+    font-family: 'MuseoModerno', cursive;
+    letter-spacing: 0em;
 }
 
 .background-VaccinationCountryBox img {
     width: 100%;
 }
 
-.div-map {
-    margin-bottom: 0;
-}
+

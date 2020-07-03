@@ -12,7 +12,6 @@ class Enter extends Component {
 
     componentWillUnmount() {
         $(document).off('mousemove')
-        // $(LiquidButton())
     }
 
     render() {
