@@ -1,21 +1,18 @@
-import React from 'react'
-
+import React, { Component } from 'react'
 import { NavLink } from "react-router-dom"
 import './Enter2.css'
 import $ from 'jquery'
 import LiquidButton from '../shared/LiquidButton'
 
-
-
-class Enter extends React.Component {
+class Enter extends Component {
 
     componentDidMount() {
         $(LiquidButton())
     }
 
     componentWillUnmount() {
-        // $(document).off('mousemove')
-        $(LiquidButton())
+        $(document).off('mousemove')
+        // $(LiquidButton())
     }
 
     render() {
