@@ -1,7 +1,5 @@
 import $ from 'jquery'
 
-
-
 function LiquidButton() {
   // Vars
   var pointsA = [],
@@ -9,7 +7,7 @@ function LiquidButton() {
     $canvas = null,
     canvas = null,
     context = null,
-    vars = null,
+    // vars = null,
     points = 8,
     viscosity = 20,
     mouseDist = 70,
@@ -93,7 +91,7 @@ function LiquidButton() {
     addPoints(buttonWidth - buttonHeight / 5, 0);
     addPoints(buttonWidth + buttonHeight / 10, buttonHeight / 2);
     addPoints(buttonWidth - buttonHeight / 5, buttonHeight);
-    for (var j = points - 1; j > 0; j--) {
+    for (let j = points - 1; j > 0; j--) {
       addPoints((x + ((buttonWidth - buttonHeight) / points) * j), buttonHeight);
     }
     addPoints(buttonHeight / 5, buttonHeight);
@@ -166,7 +164,8 @@ function LiquidButton() {
    */
   function renderCanvas() {
     // rAF
-    var rafID = requestAnimationFrame(renderCanvas);
+    requestAnimationFrame(renderCanvas);
+    
 
     // Clear scene
     context.clearRect(0, 0, $canvas.width(), $canvas.height());
@@ -179,14 +178,15 @@ function LiquidButton() {
       pointsB[i].move();
     }
 
+
     // Create dynamic gradient
     var gradientX = Math.min(Math.max(mouseX - $canvas.offset().left, 0), $canvas.width());
     var gradientY = Math.min(Math.max(mouseY - $canvas.offset().top, 0), $canvas.height());
     var distance = Math.sqrt(Math.pow(gradientX - $canvas.width() / 2, 2) + Math.pow(gradientY - $canvas.height() / 2, 2)) / Math.sqrt(Math.pow($canvas.width() / 2, 2) + Math.pow($canvas.height() / 2, 2));
 
-    var gradient = context.createRadialGradient(gradientX, gradientY, 300 + (300 * distance), gradientX, gradientY, 0);
-    gradient.addColorStop(0, '#5E8D9F');
-    gradient.addColorStop(1, '#fc8afc');
+    let gradient = context.createRadialGradient(gradientX, gradientY, 300 + (300 * distance), gradientX, gradientY, 0);
+    gradient.addColorStop(0, '#5E8D9F')
+    gradient.addColorStop(1, '#fc8afc')
 
     // Draw shapes
     var groups = [pointsA, pointsB]
@@ -194,7 +194,7 @@ function LiquidButton() {
     for (var j = 0; j <= 1; j++) {
       var points = groups[j];
 
-      if (j == 0) {
+      if (j === 0) {
         // Background style
         context.fillStyle = '#5A95A3';
       } else {
@@ -205,12 +205,12 @@ function LiquidButton() {
       context.beginPath();
       context.moveTo(points[0].x, points[0].y);
 
-      for (var i = 0; i < points.length; i++) {
+      for (let i = 0; i < points.length; i++) {
         var p = points[i];
         var nextP = points[i + 1];
-        var val = 30 * 0.552284749831;
+        // let val = 30 * 0.552284749831;
 
-        if (nextP != undefined) {
+        if (nextP !== undefined) {
           // if (nextP.ix > p.ix && nextP.iy < p.iy) {
           // 	p.cx1 = p.x;
           // 	p.cy1 = p.y-val;
@@ -260,8 +260,8 @@ function LiquidButton() {
       // Draw points
       context.fillStyle = '#000';
       context.beginPath();
-      for (var i = 0; i < pointsA.length; i++) {
-        var p = pointsA[i];
+      for (let i = 0; i < pointsA.length; i++) {
+        let p = pointsA[i];
 
         context.rect(p.x - 1, p.y - 1, 2, 2);
       }
@@ -270,8 +270,8 @@ function LiquidButton() {
       // Draw controls
       context.fillStyle = '';
       context.beginPath();
-      for (var i = 0; i < pointsA.length; i++) {
-        var p = pointsA[i];
+      for (let i = 0; i < pointsA.length; i++) {
+        let p = pointsA[i];
 
         context.rect(p.cx1 - 1, p.cy1 - 1, 2, 2);
         context.rect(p.cx2 - 1, p.cy2 - 1, 2, 2);

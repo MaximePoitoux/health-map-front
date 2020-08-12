@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import world from '../../world.json'
 import './Map.css'
 
+
 class Map extends React.Component {
   state = {
     redirect: false,

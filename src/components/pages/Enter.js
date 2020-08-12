@@ -11,14 +11,25 @@ class Enter extends Component {
     }
 
     componentWillUnmount() {
-        $(document).off('mousemove')
+        // $(document).off('mousemove', 'mouseclick')
+        // $(document).cancelAnimationFrame()
+        // $(LiquidButton()('destroy'))
+        // $(document).detach()
+        // $(document).remove()
+        // $(LiquidButton()).detach()
+        // $(LiquidButton()).remove()
+
+        
+
     }
 
     render() {
         return (
-                <NavLink to="/Map"><div href="/Map" className="btn-liquid">
-                    <span className="inner">Go to World Map</span>
-                </div></NavLink>
+                <NavLink to="/Map">
+                    <div href="/Map" className="btn-liquid">
+                        <span className="inner">Go to World Map</span>
+                    </div>
+                </NavLink>
         )
     }
 }
